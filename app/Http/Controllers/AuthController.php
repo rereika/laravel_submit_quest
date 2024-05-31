@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -18,5 +19,9 @@ class AuthController extends Controller
 
     public function createArticle(){
         return view('conduit.editor');
+    }
+
+    public function viewArticle(){
+        return view('conduit.article');
     }
 }

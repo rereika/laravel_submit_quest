@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\TagController;
 
 Route::get('/', function () {
     return view('conduit.home');
@@ -27,4 +29,4 @@ Route::get('/editor',[AuthController::class, 'createArticle'])->name('createArti
 
 Route::get('/profile/{username}', [ProfileController::class, 'show'])->name('profile.show');
 
-// Route::get('/post/{slug}', [PostController::class, 'show'])->name('post.show');
+Route::get('/article/how-to-build-webapps-that-scale',[AuthController::class,'viewArticle'])->name('viewArticle');
