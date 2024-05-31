@@ -81,7 +81,7 @@
             <textarea class="form-control" placeholder="Write a comment..." rows="3"></textarea>
           </div>
           <div class="card-footer">
-            <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" />
+          <img src="{{ asset('image/user1.jpg') }}" class="comment-author-img" alt="User1" />
             <button class="btn btn-sm btn-primary">Post Comment</button>
           </div>
         </form>
@@ -94,8 +94,8 @@
           </div>
           <div class="card-footer">
             <a href="/profile/author" class="comment-author">
-              <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" />
-            </a>
+            <img src="{{ asset('image/user2.jpg') }}" class="comment-author-img" alt="User2" />
+    </a>
             &nbsp;
             <a href="/profile/jacob-schmidt" class="comment-author">Jacob Schmidt</a>
             <span class="date-posted">Dec 29th</span>
@@ -110,8 +110,8 @@
           </div>
           <div class="card-footer">
             <a href="/profile/author" class="comment-author">
-              <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" />
-            </a>
+            <img src="{{ asset('image/user2.jpg') }}" class="comment-author-img" alt="User2" />
+    </a>
             &nbsp;
             <a href="/profile/jacob-schmidt" class="comment-author">Jacob Schmidt</a>
             <span class="date-posted">Dec 29th</span>
