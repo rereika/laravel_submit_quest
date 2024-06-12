@@ -23,42 +23,25 @@
                     </ul>
                 </div>
 
-                <div class="article-preview">
+                @foreach($articles as $article)
+                    <div class="article-preview">
                     <div class="article-meta">
-                        <a href="/profile/eric-simons"><img src="{{ asset('image/user1.jpg') }}" alt="User1"></a>
-
-                        <div class="info">
-                            <a href="" class="author">Eric Simons</a>
-                            <span class="date">January 20th</span>
-                        </div>
-                        <button class="btn btn-outline-primary btn-sm pull-xs-right">
+                            <a href="#"><img src="{{ asset('image/user1.jpg') }}" alt="User"></a>
+                            <div class="info">
+                                <a href="" class="author">Eric Simons</a>
+                                <span class="date">January 20th</span>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm pull-xs-right">
                             <i class="ion-heart"></i> 29
-                        </button>
+                            </button>
+                        <a href="{{ route('articles.show', $article->id) }}" class="preview-link">
+                            <h1>{{ $article->title }}</h1>
+                            <p>{{ Str::limit($article->body, 100) }}</p>
+                            <span>Read more...</span>
+                        </a>
                     </div>
-                    <a href="/article/how-to-build-webapps-that-scale" class="preview-link">
-                        <h1>How to build webapps that scale</h1>
-                        <p>This is the description for the post.</p>
-                        <span>Read more...</span>
-                    </a>
-                </div>
-
-                <div class="article-preview">
-                    <div class="article-meta">
-                        <a href="/profile/albert-pai"><img src="{{ asset('image/user2.jpg') }}" alt="User2"></a>
-                        <div class="info">
-                            <a href="" class="author">Albert Pai</a>
-                            <span class="date">January 20th</span>
-                        </div>
-                        <button class="btn btn-outline-primary btn-sm pull-xs-right">
-                            <i class="ion-heart"></i> 32
-                        </button>
-                    </div>
-                    <a href="/article/the-song-you-wont-ever-stop-singing" class="preview-link">
-                        <h1>The song you won't ever stop singing</h1>
-                        <p>This is the description for the post.</p>
-                        <span>Read more...</span>
-                    </a>
-                </div>
+                @endforeach
+            </div>
             </div>
 
             <div class="col-md-3">
@@ -79,6 +62,5 @@
             </div>
         </div>
     </div>
-</div>
 
 @include('conduit.footer')

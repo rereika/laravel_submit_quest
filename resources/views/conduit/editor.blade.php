@@ -6,15 +6,16 @@
     <div class="row">
 
       <div class="col-md-10 col-md-offset-1 col-xs-12">
-        <form>
+        <form method="POST" action="{{ route('articles.store') }}">
+        @csrf
           <fieldset class="form-group">
-            <input class="form-control form-control-lg" type="text" placeholder="Post Title">
+            <input class="form-control form-control-lg" type="text" name="title" placeholder="Post Title">
           </fieldset>
           <fieldset class="form-group">
-            <textarea class="form-control" rows="8" placeholder="Write your post (in markdown)"></textarea>
+            <textarea class="form-control" rows="8" name="body" placeholder="Write your post (in markdown)"></textarea>
           </fieldset>
           <fieldset class="form-group">
-            <input class="form-control" type="text" placeholder="Enter tags">
+            <input class="form-control" type="text" name="tags" placeholder="Enter tags">
             <div class="tag-list">
               <span class="label label-pill label-default"><i class="ion-close-round"></i> programming</span>
               <span class="label label-pill label-default"><i class="ion-close-round"></i> javascript</span>
