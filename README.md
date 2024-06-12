@@ -13,8 +13,13 @@ Conduitとは、[RealWorld](https://github.com/gothinkster/realworld/tree/main) 
 ```
 git clone https://github.com/rereika/laravel_submit_quest.git
 ```
-3. サーバーを立ち上げる。
+3.  依存関係のインストール
+```
+composer install
+```
+
+4. サーバーを立ち上げる。
 ```
 php artisan serve
 ```
-4. ブラウザでlocalhostに接続する。
+5. ブラウザでlocalhostに接続する。
